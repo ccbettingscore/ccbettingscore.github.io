@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Chamaro Hub Pro · Match Day HQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23c9a227' stroke='%23030305' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='15' fill='%23030305'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Ambient background effects -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ====== Navigation ====== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand" id="secretAdminTrigger">
+        <div class="brand-icon">
+          <i class="fas fa-futbol"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ccbettingscores</span>
+          <span class="brand-tag">HUB PRO</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <div class="live-pill">
+          <span class="live-dot"></span>
+          <span>LIVE</span>
+        </div>
+        <button id="adminPanelToggle" class="admin-nav-btn hidden">
+          <i class="fas fa-terminal"></i> Admin
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== Live Ticker ====== -->
+  <div class="ticker-bar" aria-label="Live tips ticker">
+    <div class="ticker-label">
+      <i class="fas fa-bolt"></i>
+      <span>LIVE TIPS</span>
+    </div>
+    <div class="ticker-viewport">
+      <div class="ticker-track" id="tickerTrack">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== Main Content ====== -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-date-pill">
+        <span class="hero-pulse-dot"></span>
+        <span id="currentDate"></span>
+      </div>
+      <h1 class="hero-title">MATCH<br>DAY HQ</h1>
+      <p class="hero-subtitle">Expert intelligence · Premium selections · Real odds</p>
+      <div class="hero-stats-bar">
+        <div class="hero-stat">
+          <span class="hero-stat-value" id="statTips">11</span>
+          <span class="hero-stat-label">Today's Tips</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value gold" id="statOdds">3.33</span>
+          <span class="hero-stat-label">Combined Odds</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" id="statMatches">0</span>
+          <span class="hero-stat-label">Matches</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="page-section">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>TODAY'S SELECTIONS</span>
+        </div>
+        <div class="section-title-row">
+          <h2 class="section-title">CC PREMIUM TIPS</h2>
+          <div class="combined-odds-badge">
+            <span class="combined-odds-label">COMBINED ODDS</span>
+            <span class="combined-odds-value">3.33</span>
+          </div>
+        </div>
+      </div>
+      <div id="tipsContainer" class="tips-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Accumulator Code -->
+    <section class="betcode-panel">
+      <div class="betcode-glow" aria-hidden="true"></div>
+      <div class="betcode-layout">
+        <div class="betcode-platform">
+          <div class="betcode-platform-icon">
+            <i class="fas fa-ticket-alt"></i>
+          </div>
+          <div class="betcode-platform-info">
+            <span class="betcode-platform-label">PLATFORM</span>
+            <span class="betcode-platform-name">SportyBet</span>
+          </div>
+        </div>
+        <div class="betcode-sep"></div>
+        <div class="betcode-main">
+          <span class="betcode-code-label">ACCUMULATOR CODE</span>
+          <div class="betcode-code-row">
+            <span class="betcode-code" id="codeInput">5BBE6G</span>
+            <button id="copyCodeBtn" class="betcode-copy-btn">
+              <i class="fas fa-copy"></i>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <span class="betcode-hint">
+            <i class="fas fa-info-circle"></i>
+            Use code to load all selections instantly
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matches Section -->
+    <section class="page-section">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>ANALYSIS</span>
+        </div>
+        <div class="section-title-row">
+          <h2 class="section-title">TOMORROW'S MATCHES</h2>
+          <span id="matchCount" class="match-count-tag">0 matches</span>
+        </div>
+      </div>
+      <div id="matchesContainer" class="matches-list">
+        <div class="empty-state">
+          <div class="empty-icon"><i class="fas fa-futbol"></i></div>
+          <p class="empty-title">No matches posted yet</p>
+          <p class="empty-sub">Check back later for tomorrow's predictions</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel hidden">
+      <div class="admin-watermark" aria-hidden="true">ADMIN</div>
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <div class="admin-header-icon"><i class="fas fa-terminal"></i></div>
+          <div>
+            <div class="admin-header-title">COMMAND CENTER</div>
+            <div class="admin-header-sub">Admin Panel · Chamaro Hub Pro</div>
+          </div>
+        </div>
+        <button id="closeAdminPanel" class="admin-close-btn" title="Close panel">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="admin-body">
+        <div class="admin-input-row">
+          <div class="admin-field">
+            <label class="admin-label" for="homeTeam">🏠 Home Team</label>
+            <input type="text" id="homeTeam" placeholder="e.g., Arsenal" class="admin-input">
+          </div>
+          <div class="admin-field">
+            <label class="admin-label" for="awayTeam">✈️ Away Team</label>
+            <input type="text" id="awayTeam" placeholder="e.g., Chelsea" class="admin-input">
+          </div>
+        </div>
+        <div class="admin-btn-row">
+          <button id="addMatchBtnAdmin" class="adm-btn adm-btn--primary">
+            <i class="fas fa-plus"></i> Add Match
+          </button>
+          <button id="exportDataBtn" class="adm-btn adm-btn--secondary">
+            <i class="fas fa-download"></i> Export JSON
+          </button>
+          <button id="clearAllBtnAdmin" class="adm-btn adm-btn--danger">
+            <i class="fas fa-trash-alt"></i> Clear All
+          </button>
+          <button id="resetDemoBtnAdmin" class="adm-btn adm-btn--accent">
+            <i class="fas fa-chart-line"></i> Load Demo
+          </button>
+        </div>
+        <p class="admin-note">
+          <i class="fas fa-terminal"></i>
+          Export JSON → replace matches array in script.js → redeploy to update.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <i class="fas fa-futbol"></i>
+        <span>Chamaro Hub Pro</span>
+      </div>
+      <p class="footer-copy">Matches curated by Admin @Chamaro.inc · For updates, contact the site owner.</p>
+      <p class="footer-disclaimer">Gambling involves risk. Bet responsibly. 18+ only.</p>
+    </footer>
+
+  </main>
+
+  <!-- Scroll-to-top -->
+  <button id="scrollTopBtn" class="scroll-top-btn opacity-0 invisible" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
