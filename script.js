@@ -30,17 +30,22 @@ let clickCount = 0;
 
 // ======================== TIPS DATA ========================
 const tips = [
-  { id: 1,  betType: "Draw or Away",  match: "Mallorca v Real Madrid",        market: "Double Chance",                       odds: 1.16, emoji: "✅" },
-  { id: 2,  betType: "Over 1.5",      match: "Atletico Madrid v Barcelona",   market: "Over/Under",                          odds: 1.15, emoji: "✅" },
-  { id: 3,  betType: "Over 0.5",      match: "FC Volendam v Feyenoord",       market: "Feyenoord Rotterdam Over/U...",       odds: 1.07, emoji: "✅" },
-  { id: 4,  betType: "Over 0.5",      match: "PSV Eindhoven v FC Utrecht",    market: "PSV Eindhoven Over/U...",             odds: 1.08, emoji: "✅" },
-  { id: 5,  betType: "Yes",           match: "PSG v Toulouse",                market: "Home Team to Win Either Half",        odds: 1.16, emoji: "✅" },
-  { id: 6,  betType: "Over 0.5",      match: "Al Nassr Club v Al-Najma",      market: "2nd Half - Over/Under",               odds: 1.08, emoji: "✅" },
-  { id: 7,  betType: "Home",          match: "Al Ahli Saudi FC v Damac FC",   market: "1X2 - 1UP",                           odds: 1.15, emoji: "✅" },
-  { id: 8,  betType: "Home",          match: "Al Hilal SFC v Al-Taawoun FC",  market: "1X2 - 1UP",                           odds: 1.12, emoji: "✅" },
-  { id: 9,  betType: "Over 1.5",      match: "Freiburg v Bayern Munich",      market: "Over/Under",                          odds: 1.12, emoji: "✅" },
-  { id: 10, betType: "Over 0.5",      match: "Glasgow Rangers v Dundee",      market: "Glasgow Rangers Over/U...",           odds: 1.05, emoji: "✅" },
-  { id: 11, betType: "Away (0:1)",    match: "Livingston FC v Heart of Midl", market: "Handicap 0:1",                        odds: 1.14, emoji: "✅" }
+  // — Image 1 —
+  { id: 1,  betType: "Over 0.5",      match: "FC Volendam v Feyenoord",       market: "Feyenoord Rotterdam Over/U...",  odds: 1.07, emoji: "✅" },
+  { id: 2,  betType: "Over 0.5",      match: "PSV Eindhoven v FC Utrecht",    market: "PSV Eindhoven Over/U...",        odds: 1.08, emoji: "✅" },
+  { id: 3,  betType: "Home",          match: "Al Ahli Saudi FC v Damac FC",   market: "1X2 - 1UP",                     odds: 1.15, emoji: "✅" },
+  { id: 4,  betType: "Home",          match: "Al Hilal SFC v Al-Taawoun FC",  market: "1X2 - 1UP",                     odds: 1.12, emoji: "✅" },
+  { id: 5,  betType: "Over 1.5",      match: "Freiburg v Bayern Munich",      market: "Over/Under",                    odds: 1.12, emoji: "✅" },
+  { id: 6,  betType: "Over 0.5",      match: "Glasgow Rangers v Dundee",      market: "Glasgow Rangers Over/U...",     odds: 1.05, emoji: "✅" },
+  { id: 7,  betType: "Home or Draw",  match: "Lorient v Paris FC",            market: "Double Chance",                 odds: 1.34, emoji: "✅" },
+  { id: 8,  betType: "Over 0.5",      match: "Lazio v Parma",                 market: "Over/Under",                    odds: 1.09, emoji: "✅" },
+  // — Image 2 —
+  { id: 9,  betType: "Yes",           match: "PSG v Toulouse",                market: "Home Team to Win Either Half",  odds: 1.15, emoji: "✅" },
+  { id: 10, betType: "Yes",           match: "Mallorca v Real Madrid",        market: "Away Team or GG",               odds: 1.11, emoji: "✅" },
+  { id: 11, betType: "Over 1.5",      match: "Atletico Madrid v Barcelona",   market: "Over/Under",                    odds: 1.15, emoji: "✅" },
+  { id: 12, betType: "Over 0.5",      match: "Moreirense FC v SC Braga",      market: "SC Braga Over/Under",           odds: 1.16, emoji: "✅" },
+  { id: 13, betType: "Over 0.5",      match: "Man City v Liverpool",          market: "Man City Over/Under",           odds: 1.12, emoji: "✅" },
+  { id: 14, betType: "Over 0.5",      match: "Rayo Vallecano v Elche CF",     market: "Rayo Vallecano Over/U...",      odds: 1.20, emoji: "✅" }
 ];
 
 // ======================== MATCHES DATA ========================
