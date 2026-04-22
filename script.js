@@ -31,21 +31,23 @@ let clickCount = 0;
 // ======================== TIPS DATA ========================
 const tips = [
   // — Image 1 —
-  { id: 1,  betType: "Over 0.5",      match: "FC Volendam v Feyenoord",       market: "Feyenoord Rotterdam Over/U...",  odds: 1.07, emoji: "✅" },
-  { id: 2,  betType: "Over 0.5",      match: "PSV Eindhoven v FC Utrecht",    market: "PSV Eindhoven Over/U...",        odds: 1.08, emoji: "✅" },
-  { id: 3,  betType: "Home",          match: "Al Ahli Saudi FC v Damac FC",   market: "1X2 - 1UP",                     odds: 1.15, emoji: "✅" },
-  { id: 4,  betType: "Home",          match: "Al Hilal SFC v Al-Taawoun FC",  market: "1X2 - 1UP",                     odds: 1.12, emoji: "✅" },
-  { id: 5,  betType: "Over 1.5",      match: "Freiburg v Bayern Munich",      market: "Over/Under",                    odds: 1.12, emoji: "✅" },
-  { id: 6,  betType: "Over 0.5",      match: "Glasgow Rangers v Dundee",      market: "Glasgow Rangers Over/U...",     odds: 1.05, emoji: "✅" },
-  { id: 7,  betType: "Home or Draw",  match: "Lorient v Paris FC",            market: "Double Chance",                 odds: 1.34, emoji: "✅" },
-  { id: 8,  betType: "Over 0.5",      match: "Lazio v Parma",                 market: "Over/Under",                    odds: 1.09, emoji: "✅" },
+  { id: 1,  betType: "Home",          match: "PSV Eindhoven v PEC Zwolle",        market: "1X2 - 1UP",                    odds: 1.09, emoji: "✅" },
+  { id: 2,  betType: "Over 3.5",      match: "FC Salzburg v FK Austria Wien",     market: "Home Team Total Corners",      odds: 1.21, emoji: "✅" },
+  { id: 3,  betType: "Over 3.5",      match: "Bayer Leverkusen v Bayern Munich",  market: "Away Team Total Corners",      odds: 1.23, emoji: "✅" },
+  { id: 4,  betType: "Yes",           match: "Celtic Glasgow v Falkirk FC",       market: "Home Team or GG",              odds: 1.07, emoji: "✅" },
+  { id: 5,  betType: "Home",          match: "Galatasaray v Genclerbirligi SK",   market: "To Qualify",                   odds: 1.07, emoji: "✅" },
   // — Image 2 —
-  { id: 9,  betType: "Yes",           match: "PSG v Toulouse",                market: "Home Team to Win Either Half",  odds: 1.15, emoji: "✅" },
-  { id: 10, betType: "Yes",           match: "Mallorca v Real Madrid",        market: "Away Team or GG",               odds: 1.11, emoji: "✅" },
-  { id: 11, betType: "Over 1.5",      match: "Atletico Madrid v Barcelona",   market: "Over/Under",                    odds: 1.15, emoji: "✅" },
-  { id: 12, betType: "Over 0.5",      match: "Moreirense FC v SC Braga",      market: "SC Braga Over/Under",           odds: 1.16, emoji: "✅" },
-  { id: 13, betType: "Over 0.5",      match: "Man City v Liverpool",          market: "Man City Over/Under",           odds: 1.12, emoji: "✅" },
-  { id: 14, betType: "Over 0.5",      match: "Rayo Vallecano v Elche CF",     market: "Rayo Vallecano Over/U...",      odds: 1.20, emoji: "✅" }
+  { id: 6,  betType: "Home",          match: "Man City v Southampton FC",         market: "To Qualify",                   odds: 1.10, emoji: "✅" },
+  { id: 7,  betType: "BetBuilder",    match: "Mainz v Bayern Munich",             market: "BetBuilder",                   odds: 1.17, emoji: "✅" },
+  { id: 8,  betType: "BetBuilder",    match: "Angers SCO v PSG",                 market: "BetBuilder",                   odds: 1.11, emoji: "✅" },
+  { id: 9,  betType: "BetBuilder",    match: "Barcelona v Celta",                 market: "BetBuilder",                   odds: 1.17, emoji: "✅" },
+  { id: 10, betType: "BetBuilder",    match: "FC Torino v Inter",                 market: "BetBuilder",                   odds: 1.17, emoji: "✅" },
+  // — Image 3 —
+  { id: 11, betType: "Over 1.5",      match: "FK Zeleznicar v Crvena Zvezda",    market: "Over/Under",                   odds: 1.13, emoji: "✅" },
+  { id: 12, betType: "BetBuilder",    match: "Burnley v Man City",               market: "BetBuilder",                   odds: 1.31, emoji: "✅" },
+  { id: 13, betType: "BetBuilder",    match: "PSG v Nantes",                     market: "BetBuilder",                   odds: 1.58, emoji: "✅" },
+  { id: 14, betType: "Draw or Away",  match: "Real Oviedo v Villarreal",         market: "Double Chance",                odds: 1.29, emoji: "✅" },
+  { id: 15, betType: "Over 8.5",      match: "Middlesbrough FC v Sheffield Wed", market: "Corners - Over/Under",         odds: 1.32, emoji: "✅" }
 ];
 
 // ======================== MATCHES DATA ========================
